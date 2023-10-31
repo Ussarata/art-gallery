@@ -1,0 +1,46 @@
+$bgWidth: 10000px;
+body {
+  background: linear-gradient(to right, #1e5799 0%,#2ce0bf 19%,#76dd2c 40%,#dba62b 60%,#e02cbf 83%,#1e5799 100%); 
+  background-size: $bgWidth 100%;
+  animation: bg 15s linear infinite ;
+}
+
+@keyframes bg{
+  0%{
+    background-position-x: 0;
+  }
+  
+  100%{
+    background-position-x: $bgWidth;
+  }
+}
+
+body {
+    height: 100vh;
+    width: 100vw;
+    margin: 0rem;
+    overflow: hidden;
+}
+
+#image-track {
+    display: flex;
+    gap: 4vmin;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(0%, -50%); 
+    user-select: none; /* -- Prevent image highlighting -- */
+}
+
+#image-track > .image {
+    width: 40vmin;
+    height: 56vmin;
+    object-fit: cover;
+    object-position: 100% center;
+}
+
+/* -- YouTube Link Styles -- */
+
+body.menu-toggled > .meta-link > span {
+    color: rgb(30, 30, 30);
+}
